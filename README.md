@@ -14,7 +14,7 @@
     -Ways to change the color of the divs
         -adding a new class to the div
         -changing the div's background color using JS
-3. Add a button to the top of the screen which will clear current grid and send the user a popup asking for the number of squares per side fot the new grid.
+3. Add a button to the top of the screen which will clear current grid and send the user a popup asking for the number of squares per side for the new grid.
     -New grid should be generated in the SAME total space as before
     -Set limit for user input to a maximum of 100
     -Research button tags in HTML and how you can make a JS function run when one is clicked
