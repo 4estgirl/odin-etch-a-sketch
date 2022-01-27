@@ -70,6 +70,11 @@
     color: #EDE7D9;
 }
 
+#grid-height {
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
 :root{
     --side: 4;
 }
@@ -83,6 +88,7 @@
     height: 960px;
     width: 960px;
     grid-template-columns: repeat(var(--side), 1fr);
+    grid-template-rows: repeat(var(--side), 1fr);
 }
 
 .grid-item {
