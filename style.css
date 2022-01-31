@@ -77,6 +77,7 @@
 
 :root{
     --side: 4;
+    --color: #EDE7D9;
 }
 
 #grid-container {
@@ -92,5 +93,9 @@
 }
 
 .grid-item {
-    background-color: #EDE7D9;
+    background-color: var(--color);
+}
+
+.change-color {
+    background-color: #231651;
 }

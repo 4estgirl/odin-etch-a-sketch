@@ -20,3 +20,8 @@
     -Research button tags in HTML and how you can make a JS function run when one is clicked
     -check out prompts
 4. ##OPTIONAL## Have each pass through with the mouse change it to a completely random RGB value. Ty having each pass just add another 10% of black to it so that only after 10 passes the square is completely black.
+
+
+
+##PROBLEMS TO FIX
+- color change not yet working 
