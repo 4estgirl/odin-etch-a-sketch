@@ -21,6 +21,11 @@ closeBtn.addEventListener("click", () => {
     toggleModal();
 });
 
+function randomColor(){
+    let randomNumber = Math.random()*1000000;
+    let newColor = Math.round(randomNumber);
+    return newColor;
+};
 
 //create initial grid
 function generateInitialGrid(){
@@ -32,10 +37,17 @@ function generateInitialGrid(){
         //set color
         let colorMe = document.querySelectorAll(".grid-item");
         colorMe.forEach(element => {
+            //sets random color every time you mouseover
             element.addEventListener("mouseenter", () => {
-                element.style.setProperty("background-color", "#231651");
+                element.style.setProperty("background-color", "#" + randomColor());
+            });
+            element.addEventListener("mouseleave", () => {
+                element.addEventListener("mouseenter", () => {
+                    element.style.setProperty("background-color", "#" + randomColor());
+                }); 
             });
         });
+        
     };
 };
 
@@ -54,8 +66,14 @@ function generateAnyGrid(){
         //set color
         let colorMe = document.querySelectorAll(".grid-item");
         colorMe.forEach(element => {
+            //sets random color every time you mouseover
             element.addEventListener("mouseenter", () => {
-                element.style.setProperty("background-color", "#231651");
+                element.style.setProperty("background-color", "#" + randomColor());
+            });
+            element.addEventListener("mouseleave", () => {
+                element.addEventListener("mouseenter", () => {
+                    element.style.setProperty("background-color", "#" + randomColor());
+                }); 
             });
         });
     };
