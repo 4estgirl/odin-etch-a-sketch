@@ -86,8 +86,8 @@
     margin: 10px;
     display: grid;
     grid-gap: 2px 2px;
-    height: 960px;
-    width: 960px;
+    height: 650px;
+    width: 650px;
     grid-template-columns: repeat(var(--side), 1fr);
     grid-template-rows: repeat(var(--side), 1fr);
 }
