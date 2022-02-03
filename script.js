@@ -21,11 +21,11 @@ closeBtn.addEventListener("click", () => {
     toggleModal();
 });
 
-function randomColor(){
-    let randomNumber = Math.random()*1000000;
-    let newColor = Math.round(randomNumber);
-    return newColor;
-};
+//random RGB color
+function randomNumber(){
+    let randomValue = Math.floor(Math.random() * 255);
+    return randomValue;
+}
 
 //create initial grid
 function generateInitialGrid(){
@@ -36,20 +36,18 @@ function generateInitialGrid(){
         gridContainer.innerHTML += gridItem;
         //set color
         let colorMe = document.querySelectorAll(".grid-item");
-        colorMe.forEach(element => {
-            //sets random color every time you mouseover
+        colorMe.forEach(element => {          
             element.addEventListener("mouseenter", () => {
-                element.style.setProperty("background-color", "#" + randomColor());
+                element.style.setProperty("background-color", "rgb(" + randomNumber() + "," + randomNumber() + "," + randomNumber() + ")");
             });
             element.addEventListener("mouseleave", () => {
                 element.addEventListener("mouseenter", () => {
-                    element.style.setProperty("background-color", "#" + randomColor());
-                }); 
+                    element.style.setProperty("background-color", "rgb(" + randomNumber() + "," + randomNumber() + "," + randomNumber() + ")");
+                });
             });
         });
-        
     };
-};
+};        
 
 window.addEventListener("load", () => {
     generateInitialGrid();
@@ -68,11 +66,11 @@ function generateAnyGrid(){
         colorMe.forEach(element => {
             //sets random color every time you mouseover
             element.addEventListener("mouseenter", () => {
-                element.style.setProperty("background-color", "#" + randomColor());
+                element.style.setProperty("background-color", "rgb(" + randomNumber() + "," + randomNumber() + "," + randomNumber() + ")");
             });
             element.addEventListener("mouseleave", () => {
                 element.addEventListener("mouseenter", () => {
-                    element.style.setProperty("background-color", "#" + randomColor());
+                    element.style.setProperty("background-color", "rgb(" + randomNumber() + "," + randomNumber() + "," + randomNumber() + ")");
                 }); 
             });
         });
